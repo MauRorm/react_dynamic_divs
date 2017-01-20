@@ -1,6 +1,6 @@
 import React, {Component, PropTypes} from 'react';
 import ReactDOM from 'react-dom';
-import CustomHeader from './customHeader.jsx';
+import CustomHeader from './custom_header.jsx';
 
 /*	
 	properties list
@@ -11,8 +11,8 @@ import CustomHeader from './customHeader.jsx';
 //https://github.com/emmenko/react-playground/blob/master/examples/react/main.jsx
 //https://medium.com/@housecor/react-stateless-functional-components-nine-wins-you-might-have-overlooked-997b0d933dbc#.qmwmmv1r9
 
-var customState = {
-	messageTitle : 'Reportes de México'
+const customState = {
+	messageTitle : 'Ejemplo de divs dinámicos'
 }
 
 export default class CustomDiv extends Component{
@@ -30,11 +30,11 @@ export default class CustomDiv extends Component{
 	render(){
 		return (
 			<div>
-				<CustomHeader titleText = {this.state.messageTitle}/>
+				<CustomHeader textTitle = {this.state.messageTitle}/>
 				<div className='reportData'>
-					<div>{this.props.cityName}</div>
-					<div>{this.props.municipalName}</div>
-					<div>{this.props.desc}</div>
+					<div>{this.props.title}</div>
+					<div>{this.props.data}</div>
+					<div>{this.props.description}</div>
 					<div>{this.props.code}</div>
 				</div>
 			</div>

@@ -54,13 +54,13 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _customSection = __webpack_require__(159);
+	var _custom_section = __webpack_require__(159);
 
-	var _customSection2 = _interopRequireDefault(_customSection);
+	var _custom_section2 = _interopRequireDefault(_custom_section);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	_reactDom2.default.render(_react2.default.createElement(_customSection2.default, null), document.getElementById('container'));
+	_reactDom2.default.render(_react2.default.createElement(_custom_section2.default, null), document.getElementById('container'));
 
 /***/ },
 /* 1 */
@@ -19776,9 +19776,9 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _customDiv = __webpack_require__(160);
+	var _custom_div = __webpack_require__(160);
 
-	var _customDiv2 = _interopRequireDefault(_customDiv);
+	var _custom_div2 = _interopRequireDefault(_custom_div);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -19788,8 +19788,8 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	/*	
-		properties list
+	/*
+		list properties
 		-this.props.desc
 		-this.props.code
 		-this.props.cityName
@@ -19798,7 +19798,7 @@
 	*/
 
 	var customState = {
-		municipalName: ['GAM', 'MIGUEL HIDALGO', 'COYOACAN', 'BENITO JUAREZ', 'GAM', 'MIGUEL HIDALGO', 'MILPA ALTA', 'AZCAPOTZALCO', 'IZTAPALAPA', 'IZTACALCO']
+		dataArray: ['Dato 1', 'Dato 2', 'Dato 3', 'Dato 4', 'Dato 5', 'Dato 6', 'Dato 7', 'Dato 8', 'Dato 8', 'Dato 9']
 	};
 
 	var CustomSection = function (_Component) {
@@ -19819,8 +19819,14 @@
 				return _react2.default.createElement(
 					'section',
 					null,
-					this.state.municipalName.map(function (item) {
-						return _react2.default.createElement(_customDiv2.default, { desc: 'Asalto', code: 'rj-4f-df-4w-5s', cityName: 'CDMX', municipalName: item });
+					this.state.dataArray.map(function (item, index) {
+						return _react2.default.createElement(_custom_div2.default, {
+							key: index,
+							description: 'cualquier descripci\xF3n',
+							code: 'cualquier c\xF3digo',
+							title: 'Cualquier titulo',
+							data: item
+						});
 					})
 				);
 			}
@@ -19851,9 +19857,9 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _customHeader = __webpack_require__(161);
+	var _custom_header = __webpack_require__(161);
 
-	var _customHeader2 = _interopRequireDefault(_customHeader);
+	var _custom_header2 = _interopRequireDefault(_custom_header);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -19873,7 +19879,7 @@
 	//https://medium.com/@housecor/react-stateless-functional-components-nine-wins-you-might-have-overlooked-997b0d933dbc#.qmwmmv1r9
 
 	var customState = {
-		messageTitle: 'Reportes de México'
+		messageTitle: 'Ejemplo de divs dinámicos'
 	};
 
 	var CustomDiv = function (_Component) {
@@ -19900,24 +19906,24 @@
 				return _react2.default.createElement(
 					'div',
 					null,
-					_react2.default.createElement(_customHeader2.default, { titleText: this.state.messageTitle }),
+					_react2.default.createElement(_custom_header2.default, { textTitle: this.state.messageTitle }),
 					_react2.default.createElement(
 						'div',
 						{ className: 'reportData' },
 						_react2.default.createElement(
 							'div',
 							null,
-							this.props.cityName
+							this.props.title
 						),
 						_react2.default.createElement(
 							'div',
 							null,
-							this.props.municipalName
+							this.props.data
 						),
 						_react2.default.createElement(
 							'div',
 							null,
-							this.props.desc
+							this.props.description
 						),
 						_react2.default.createElement(
 							'div',
@@ -19973,8 +19979,6 @@
 		-this.props.code
 	*/
 
-	var customState = {};
-
 	var CustomHeader = function (_Component) {
 		_inherits(CustomHeader, _Component);
 
@@ -19983,7 +19987,6 @@
 
 			var _this = _possibleConstructorReturn(this, (CustomHeader.__proto__ || Object.getPrototypeOf(CustomHeader)).call(this, props));
 
-			_this.state = customState;
 			_this.eventHandler = _this.eventHandler.bind(_this);
 			return _this;
 		}
@@ -20000,7 +20003,7 @@
 				return _react2.default.createElement(
 					'p',
 					{ className: 'headerText', onClick: this.eventHandler },
-					this.props.titleText
+					this.props.textTitle
 				);
 			}
 		}]);
