@@ -4,7 +4,7 @@ Contiene la configuración básica de Webpack que es una herramienta la cual nos
  siendo en este ejemplo útil para la transpilación de Javascript en su versión 6 a la versión 5 para que la mayoría de 
  navegadores puedan interpretar nuestro código. Otra función útil es poder transpilar el código de Reactjs en HTML entendible al navegador.
  
- Para tu instalación:
+ Para su instalación:
  
  1.- Clonar el repositorio.
  2.- Instalar los paquetes con "npm install".
