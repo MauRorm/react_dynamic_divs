@@ -7,14 +7,10 @@ import ReactDOM from 'react-dom';
 	-this.props.code
 */
 
-var customState = {
-}
-
 export default class CustomHeader extends Component{
 
 	constructor(props) {
 		super(props);
-		this.state = customState;
 		this.eventHandler = this.eventHandler.bind(this);
 	}
 
@@ -25,7 +21,7 @@ export default class CustomHeader extends Component{
 
 	render(){
 		return (
-			<p className='headerText' onClick={this.eventHandler}>{this.props.titleText}</p>
+			<p className = 'headerText' onClick = {this.eventHandler}>{this.props.textTitle}</p>
 		)
 	}
 }
