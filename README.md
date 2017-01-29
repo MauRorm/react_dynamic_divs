@@ -4,16 +4,16 @@ Contiene la configuración básica de Webpack que es una herramienta la cual nos
  siendo en este ejemplo útil para la transpilación de Javascript en su versión 6 a la versión 5 para que la mayoría de 
  navegadores puedan interpretar nuestro código. Otra función útil es poder transpilar el código de Reactjs en HTML entendible al navegador.
  
- </h2>Para su instalación:</h2>
+ <h2>Para su instalación:</h2>
  
- 1.- Clonar el repositorio.
- 2.- Instalar los paquetes con "npm install".
- 4.- Ejecutar "./node_modules/.bin/webpack" para transpilar(repetir este paso cada que se haga un nuevo cambio en el código) ó
+ 1.- Clonar el repositorio.<br />
+ 2.- Instalar los paquetes con "npm install".<br />
+ 3.- Ejecutar "./node_modules/.bin/webpack" para transpilar(repetir este paso cada que se haga un nuevo cambio en el código) ó
  	 ejecute "./node_modules/.bin/webpack -w" para no tener que repetir el proceso en caso de cambios, Webpack se ejecutará de nuevo
- 	 automáticamente y será cuestión de refrescar el navegador para apreciar dichos cambios.
- 3.- Abrir el index.html que viene en la carpeta "public" para ver el ejemplo.
+ 	 automáticamente y será cuestión de refrescar el navegador para apreciar dichos cambios.<br />
+ 4.- Abrir el index.html que viene en la carpeta "public" para ver el ejemplo.<br />
 
-Documentación breve sobre el archivo webpack.config.js.
+<h2>Documentación breve sobre el archivo webpack.config.js.</h2>
 
 <h3>resolve:</h3> Indicamos a Webpack que extensiones de archivos procesara, se toman a partir de la ruta <br />
          actual de webpack.config.js. <br />
@@ -35,5 +35,5 @@ Documentación breve sobre el archivo webpack.config.js.
        para poder hacer uso de las funciones javascript en ES6 y "react" para poder transformar nuestro código .jsx a <br />
        Javascript puro. Los presets antes mencionados forman parte del modulo Babel, no son propios de Webpack. <br /><br />
 
-Para poder ejecutar Webpack se puede aplicar en la consola "./node_modules/.bin/webpack" ó bien se puede agregar a los comandos <br /> ejecutables en el package.json para ser ejecutados como un comando NPM, ésto creará el archivo build.js el cual es el resultado final de la transpilación, este archivo no se suele modificar directamente, en caso de cualquier cambio, se trabaja con los componentes directos de Reactjs o bien con los archivos fuente. Cabe destacar que Webpack tiene multiples funcionalidades más, que explicaré en futuros ejemplos.
+Para poder ejecutar Webpack se puede aplicar en la consola "./node_modules/.bin/webpack" ó bien se puede agregar a los comandos  ejecutables en el package.json para ser ejecutados como un comando NPM, ésto creará el archivo build.js el cual es el resultado final de la transpilación, este archivo no se suele modificar directamente, en caso de cualquier cambio, se trabaja con los componentes directos de Reactjs o bien con los archivos fuente. Cabe destacar que Webpack tiene multiples funcionalidades más, que explicaré en futuros ejemplos.
  
