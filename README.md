@@ -18,7 +18,7 @@ Contiene la configuración básica de Webpack que es una herramienta la cual nos
 <h3>resolve:</h3> Indicamos a Webpack que extensiones de archivos procesara, se toman a partir de la ruta <br />
          actual de webpack.config.js. <br />
          <br />
-<h3>entry</h3>: Ruta en la cuál se encuentra el componente que envuelve nuestra aplicación en Reactjs y donde se<br />
+<h3>entry:</h3> Ruta en la cuál se encuentra el componente que envuelve nuestra aplicación en Reactjs y donde se<br />
        inicia el procesamiento de Webpack. La parte de la ruta "__dirname" es una instrucción de Node, permite saber la ruta absoluta de un directorio. <br /><br />
 <h3>output:</h3> Se compone por el "path" que es la ruta donde se creara el archivo transpilado.<br />
         "filename" será el nombre de nuestro archivo transpilado, en este caso "build.js", dicho archivo <br />
@@ -35,5 +35,6 @@ Contiene la configuración básica de Webpack que es una herramienta la cual nos
        para poder hacer uso de las funciones javascript en ES6 y "react" para poder transformar nuestro código .jsx a <br />
        Javascript puro. Los presets antes mencionados forman parte del modulo Babel, no son propios de Webpack. <br /><br />
 
+<h2>Nota</h2>
 Para poder ejecutar Webpack se puede aplicar en la consola "./node_modules/.bin/webpack" ó bien se puede agregar a los comandos  ejecutables en el package.json para ser ejecutados como un comando NPM, ésto creará el archivo build.js el cual es el resultado final de la transpilación, este archivo no se suele modificar directamente, en caso de cualquier cambio, se trabaja con los componentes directos de Reactjs o bien con los archivos fuente. Cabe destacar que Webpack tiene multiples funcionalidades más, que explicaré en futuros ejemplos.
  
